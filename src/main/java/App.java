@@ -81,5 +81,28 @@ public class App {
       response.redirect(courseIdPath);
       return null;
     });
+
+    // get("/students/:student_id", (request, response) -> {
+    //   HashMap<String, Object> model = new HashMap<String, Object>();
+    //   int studentId = Integer.parseInt(request.queryParams("student_id"));
+    //   Student student = Student.find(studentId);
+    //   List<Course> thisKidsClasses = student.getCourses();
+    //   model.put("thisKidsClasses", thisKidsClasses);
+    //   model.put("student", student);
+    //   model.put("allCourses", Course.all());
+    //   model.put("template", "templates/student.vtl");
+    //   return new ModelAndView(model, layout);
+    // }, new VelocityTemplateEngine());
+
+    // post("/students/:student_id/add", (request, response) -> {
+    //   int studId = Integer.parseInt(request.queryParams("student_id"));
+    //   Student student = Student.find(studId);
+    //   int newCourseId = Integer.parseInt(request.queryParams("courseid"));
+    //   Course newCourse = Course.find(newCourseId);
+    //   newCourse.addStudent(student);
+    //   String studIdPath = String.format("/students/%d", studId);
+    //   response.redirect(studIdPath);
+    //   return null;
+    // });
   }
 }
