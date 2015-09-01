@@ -82,6 +82,8 @@ public class App {
       return null;
     });
 
+//attempting to show students on page not enrolled in any class
+
     // get("/students/:student_id", (request, response) -> {
     //   HashMap<String, Object> model = new HashMap<String, Object>();
     //   int studentId = Integer.parseInt(request.queryParams("student_id"));
