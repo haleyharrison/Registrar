@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="CourseTest" tests="8" skipped="0" failures="0" errors="0" timestamp="2015-09-01T18:54:27" hostname="epicodus-112.local" time="0.217">
+  <properties/>
+  <testcase name="updateCourse_changesCourse" classname="CourseTest" time="0.119"/>
+  <testcase name="save_savesCorrectlyIntoDatabase" classname="CourseTest" time="0.017"/>
+  <testcase name="all_emptyAtFirst" classname="CourseTest" time="0.009"/>
+  <testcase name="getId_returnsId" classname="CourseTest" time="0.017"/>
+  <testcase name="getCourseName_returnsCourseName" classname="CourseTest" time="0.016"/>
+  <testcase name="equals_returnsTrueIfInputIsTheSame" classname="CourseTest" time="0.006"/>
+  <testcase name="find_findsCourseInDatabase_True" classname="CourseTest" time="0.014"/>
+  <testcase name="delete_DeletesFromDatabase" classname="CourseTest" time="0.018"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

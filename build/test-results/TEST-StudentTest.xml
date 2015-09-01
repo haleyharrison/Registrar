@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="StudentTest" tests="10" skipped="0" failures="0" errors="0" timestamp="2015-09-01T18:54:27" hostname="epicodus-112.local" time="0.125">
+  <properties/>
+  <testcase name="getEnrollment_returnsGetEnrollment" classname="StudentTest" time="0.01"/>
+  <testcase name="updateName_changesName" classname="StudentTest" time="0.018"/>
+  <testcase name="save_savesCorrectlyIntoDatabase" classname="StudentTest" time="0.013"/>
+  <testcase name="all_emptyAtFirst" classname="StudentTest" time="0.009"/>
+  <testcase name="getId_returnsId" classname="StudentTest" time="0.014"/>
+  <testcase name="updateEnrollment_changesEnrollment" classname="StudentTest" time="0.017"/>
+  <testcase name="equals_returnsTrueIfInputIsTheSame" classname="StudentTest" time="0.003"/>
+  <testcase name="find_findsStudentInDatabase_True" classname="StudentTest" time="0.013"/>
+  <testcase name="getName_returnsName" classname="StudentTest" time="0.008"/>
+  <testcase name="delete_DeletesFromDatabase" classname="StudentTest" time="0.016"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
