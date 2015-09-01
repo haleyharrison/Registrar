@@ -31,4 +31,31 @@
     <button type='submit'>delete course</button>
 </form>
 
+
+<ul>
+  #foreach ($student in $students)
+    <li><a href="/students/$student.getId()"> see courses for $student.getName()</a></li>
+  #end
+</ul>
+
+<form action="/students" method="post">
+  <label for="studentName">student name</label>
+  <input id="studentName" name="studentName" type="text">
+
+  <label for="enrollmentDate">enrollment date</label>
+  <input id="enrollmentDate" name="enrollmentDate" type="text">
+
+  <button type="submit">add</button>
+</form>
+
+<form action='/students_delete' method='post'>
+    <label for="student_id">Select a student</label>
+    <select id='student_id' name='student_id' type='text'>
+      #foreach($student in $students)
+        <option value="$student.getId()"> $student.getName() </option>
+      #end
+    </select>
+    <button type='submit'>delete student</button>
+</form>
+
 </body>

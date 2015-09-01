@@ -14,6 +14,8 @@ public class App {
     get("/", (request, response) -> {
       HashMap<String, Object> model = new HashMap<String, Object>();
       List<Course> courses = Course.all();
+      List<Student> students = Student.all();
+      model.put("students", students);
       model.put("courses", courses);
       model.put("template", "templates/index.vtl");
       return new ModelAndView(model, layout);
@@ -33,6 +35,24 @@ public class App {
       int courseId = Integer.parseInt(request.queryParams("course_id"));
       Course deadCourse = Course.find(courseId);
       deadCourse.delete();
+      response.redirect("/");
+      return null;
+    });
+
+    post("/students", (request, response) -> {
+      HashMap<String, Object> model = new HashMap<String, Object>();
+      String studentName = request.queryParams("studentName");
+      String studentEnrollmentDate = request.queryParams("enrollmentDate");
+      Student newStudent = new Student(studentName, studentEnrollmentDate);
+      newStudent.save();
+      response.redirect("/");
+      return null;
+    });
+
+    post("/students_delete", (request, response) -> {
+      int studentId = Integer.parseInt(request.queryParams("student_id"));
+      Student deadStudent = Student.find(studentId);
+      deadStudent.delete();
       response.redirect("/");
       return null;
     });
