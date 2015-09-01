@@ -1,16 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="StudentTest" tests="10" skipped="0" failures="0" errors="0" timestamp="2015-09-01T21:30:42" hostname="epicodus-112.local" time="0.13">
+<testsuite name="StudentTest" tests="11" skipped="0" failures="0" errors="0" timestamp="2015-09-01T21:50:53" hostname="epicodus-112.local" time="0.166">
   <properties/>
-  <testcase name="getEnrollment_returnsGetEnrollment" classname="StudentTest" time="0.011"/>
-  <testcase name="updateName_changesName" classname="StudentTest" time="0.02"/>
+  <testcase name="getEnrollment_returnsGetEnrollment" classname="StudentTest" time="0.009"/>
+  <testcase name="updateName_changesName" classname="StudentTest" time="0.019"/>
   <testcase name="save_savesCorrectlyIntoDatabase" classname="StudentTest" time="0.013"/>
-  <testcase name="all_emptyAtFirst" classname="StudentTest" time="0.009"/>
-  <testcase name="getId_returnsId" classname="StudentTest" time="0.012"/>
-  <testcase name="updateEnrollment_changesEnrollment" classname="StudentTest" time="0.016"/>
-  <testcase name="equals_returnsTrueIfInputIsTheSame" classname="StudentTest" time="0.006"/>
+  <testcase name="all_emptyAtFirst" classname="StudentTest" time="0.014"/>
+  <testcase name="getId_returnsId" classname="StudentTest" time="0.014"/>
+  <testcase name="getCourses_returnsCourses" classname="StudentTest" time="0.023"/>
+  <testcase name="updateEnrollment_changesEnrollment" classname="StudentTest" time="0.021"/>
+  <testcase name="equals_returnsTrueIfInputIsTheSame" classname="StudentTest" time="0.005"/>
   <testcase name="find_findsStudentInDatabase_True" classname="StudentTest" time="0.013"/>
   <testcase name="getName_returnsName" classname="StudentTest" time="0.01"/>
-  <testcase name="delete_DeletesFromDatabase" classname="StudentTest" time="0.017"/>
+  <testcase name="delete_DeletesFromDatabase" classname="StudentTest" time="0.019"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

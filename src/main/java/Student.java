@@ -112,6 +112,19 @@ public class Student{
         }
     }
 
+    public List<Course> getCourses(){
+        try(Connection con = DB.sql2o.open()){
+          String sql = "SELECT courses.* FROM" +
+          " students" +
+          " JOIN students_courses ON (students.id = students_courses.student_id)" +
+          " JOIN courses ON (students_courses.course_id = courses.id)" +
+          " WHERE students.id = :id";
+          List<Course> courses = con.createQuery(sql)
+            .addParameter("id", this.id)
+            .executeAndFetch(Course.class);
+            return courses;
+          }
+    }
 
 
 

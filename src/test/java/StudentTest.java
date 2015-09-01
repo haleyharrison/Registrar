@@ -84,4 +84,14 @@ public class StudentTest{
     assertEquals(false, myStudent.equals(savedStudent));
   }
 
+  @Test
+  public void getCourses_returnsCourses(){
+    Course myCourse = new Course ("Potions", "P - 204");
+    myCourse.save();
+    Student myStudent = new Student ("Hermione Granger", "September 1, 1991");
+    myStudent.save();
+    myStudent.addCourse(myCourse);
+    assertEquals(myStudent.getCourses().size(), 1);
+  }
+
 }
