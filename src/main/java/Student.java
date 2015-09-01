@@ -104,7 +104,7 @@ public class Student{
 
     public void addCourse(Course course){
         try(Connection con = DB.sql2o.open()){
-          String sql = "INSERT INTO students_courses VALUES (:student_id, :course_id)";
+          String sql = "INSERT INTO students_courses (student_id, course_id) VALUES (:student_id, :course_id)";
           con.createQuery(sql)
             .addParameter("student_id", this.getId())
             .addParameter("course_id", course.getId())

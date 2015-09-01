@@ -37,7 +37,7 @@ public class CourseTest{
 
   @Test
   public void getCourseName_returnsCourseName(){
-    Course myCourse = new Course ("Herbology", "H-101");
+    Course myCourse = new Course ("Herbology", "H - 101");
     myCourse.save();
     Course savedCourse = Course.all().get(0);
     assertEquals(savedCourse.getCourseName(), myCourse.getCourseName());
@@ -76,8 +76,8 @@ public class CourseTest{
     myStudent.save();
     Course myCourse = new Course ("Herbology", "H - 101");
     myCourse.save();
-    myStudent.addCourse(myCourse);
-    assertEquals(myStudent, myCourse.getStudents());
+    myCourse.addStudent(myStudent);
+    assertEquals(myCourse.getStudents().size(), 1);
   }
 
 }
