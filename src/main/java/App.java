@@ -40,7 +40,7 @@ public class App {
     });
 
     post("/students", (request, response) -> {
-      HashMap<String, Object> model = new HashMap<String, Object>();
+      //HashMap<String, Object> model = new HashMap<String, Object>();
       String studentName = request.queryParams("studentName");
       String studentEnrollmentDate = request.queryParams("enrollmentDate");
       Student newStudent = new Student(studentName, studentEnrollmentDate);
@@ -57,5 +57,29 @@ public class App {
       return null;
     });
 
+    get("/courses/:course_id", (request, response) -> {
+      HashMap<String, Object> model = new HashMap<String, Object>();
+      int course_id = Integer.parseInt(request.params("course_id"));
+      Course course = Course.find(course_id);
+      List<Student> studentsInCourse = course.getStudents();
+      model.put("studentsInCourse", studentsInCourse);
+      model.put("course", course);
+      model.put("allStudents", Student.all());
+      model.put("template", "templates/course.vtl");
+      return new ModelAndView(model, layout);
+    }, new VelocityTemplateEngine());
+
+    post("/courses/:course_id/add", (request, response) -> {
+      int courseId = Integer.parseInt(request.queryParams("course_id"));
+      Course course = Course.find(courseId);
+      int newStudentId = Integer.parseInt(request.queryParams("studentid"));
+      Student newStudent = Student.find(newStudentId);
+      newStudent.addCourse(course);
+      // model.put("course", course);
+      // model.put("allStudents", Student.all());
+      String courseIdPath = String.format("/courses/%d", courseId);
+      response.redirect(courseIdPath);
+      return null;
+    });
   }
 }

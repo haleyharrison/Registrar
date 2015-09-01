@@ -1,0 +1,25 @@
+<h1>Students enrolled in $course.getCourseName() $course.getCourseNumber()</h1>
+
+#if($course.getStudents())
+  <p>these students are enrolled in the class:</p>
+  <ul>
+    #foreach($student in $studentsInCourse)
+      <li>$student.getName() (enrollment date: $student.getEnrollmentDay())</li>
+    #end
+  </ul>
+#end
+
+<h4>add students to this class</h4>
+
+<form action='/courses/$course.getId()/add' method='post'>
+    <input id="course_id" name="course_id" type="hidden" value="$course.getId()">
+    <label for="studentid">pick a student to add</label>
+    <select id='studentid' name='studentid' type='text'>
+      #foreach($student in $allStudents)
+        <option value="$student.getId()"> $student.getName() </option>
+      #end
+    </select>
+    <button type='submit'>add student</button>
+</form>
+
+<p><a href='/'>Home</a></p>
